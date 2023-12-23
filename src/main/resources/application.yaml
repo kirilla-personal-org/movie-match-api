@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: movie-match
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:postgresql://localhost:12200/movie_db
+    username: user
+    password: password
+    driverClassName: org.postgresql.Driver
+  config:
+    import: optional:configserver:http://user:password@localhost:8888/
+  cloud:
+    config:
+      label: master
+
+management:
+  server:
+    port: 8081
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus,logfile,info,env,loggers,flyway,metrics
+
+server:
+  port: 8082
