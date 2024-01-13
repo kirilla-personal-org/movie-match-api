@@ -10,8 +10,6 @@ import ru.afanasyev.app.api.MovieDataService;
 import ru.afanasyev.fw.MovieMatchApplication;
 
 @SpringBootTest(classes = {MovieMatchApplication.class})
-@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class,
-    HibernateJpaAutoConfiguration.class})
 @ActiveProfiles({"test"})
 class IntegrationTest {
     @Autowired

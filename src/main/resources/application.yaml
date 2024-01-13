@@ -1,8 +1,6 @@
 spring:
   application:
     name: movie-match
-  profiles:
-    active: local
   datasource:
     url: jdbc:postgresql://localhost:12200/movie_db
     username: user
@@ -20,7 +18,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,prometheus,logfile,info,env,loggers,flyway,metrics
+#         refresh context: curl -H "Content-Type: application/json" -d {} http://localhost:8081/actuator/refresh
+        include: "*"
 
-server:
-  port: 8082
+# Не работает сваггер из-за переименования с MovieMatch на movie-match (надо пересоздать проект)
