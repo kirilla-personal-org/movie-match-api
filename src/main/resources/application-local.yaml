@@ -1,0 +1,7 @@
+kinopoisk:
+  tokens:
+  - aaa
+
+bean:
+  visualizer:
+    web-path: /beans

@@ -12,7 +12,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.Proxy;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 @Component
 @Slf4j
@@ -37,28 +39,29 @@ public class AbstractMovieAdapterPostProcessor implements BeanPostProcessor {
 
     static class TokenInvocationHandler implements InvocationHandler {
         private final AbstractMovieAdapter target;
-        private final Map<String, Method> methods = new HashMap<>();
+        private final Set<String> methods = new HashSet<>();
 
         public TokenInvocationHandler(AbstractMovieAdapter target) {
             this.target = target;
 
             for (Method method : target.getClass().getDeclaredMethods()) {
                 if (Modifier.isPublic(method.getModifiers())) {
-                    this.methods.put(method.getName(), method);
+                    this.methods.add(method.getName());
                 }
             }
         }
 
         @Override
-        public Object invoke(Object proxy, Method method, Object[] args) {
+        public Object invoke(Object proxy, Method method, Object[] args) throws Exception {
             try {
                 return method.invoke(target, args);
             } catch (Exception e) {
-                target.switchToken();
-                try {
+                if (methods.contains(method.getName())) {
+                    log.info("Error occurred. Switching token. Reason: {}", e.getMessage());
+                    target.switchToken();
                     return method.invoke(target, args);
-                } catch (Exception ex) {
-                    throw new ServiceUnavailableException(ex);
+                } else {
+                    throw e;
                 }
             }
         }

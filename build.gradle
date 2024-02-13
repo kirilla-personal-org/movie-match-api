@@ -7,8 +7,8 @@ plugins {
 group 'ru.afanasyev'
 version '1.0-SNAPSHOT'
 
-
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
@@ -37,6 +37,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
+    implementation 'ru.afanasyev:movie-bean-visualizer:1.0-SNAPSHOT'
 
     runtimeOnly 'org.postgresql:postgresql'
 

@@ -1,3 +1,5 @@
+package it;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -11,12 +13,5 @@ import ru.afanasyev.fw.MovieMatchApplication;
 
 @SpringBootTest(classes = {MovieMatchApplication.class})
 @ActiveProfiles({"test"})
-class IntegrationTest {
-    @Autowired
-    private MovieDataService kinopoiskAdapter;
-
-    @Test
-    void test() {
-        System.out.println(kinopoiskAdapter.getRandomMovie());
-    }
+public abstract class IntegrationTest {
 }
