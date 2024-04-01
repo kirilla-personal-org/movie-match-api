@@ -1,8 +1,8 @@
-package ru.afanasyev.adapter;
+package ru.afanasyev.moviematch.adapter;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
-import ru.afanasyev.app.api.TokenProvider;
+import ru.afanasyev.moviematch.app.api.TokenProvider;
 
 @Getter
 @Slf4j

@@ -1,4 +1,4 @@
-package ru.afanasyev.app.impl.beanmanagement;
+package ru.afanasyev.moviematch.app.impl.beanmanagement;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.Ordered;

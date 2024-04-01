@@ -2,9 +2,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import ru.afanasyev.app.impl.beanmanagement.ValidationExecutor;
-import ru.afanasyev.app.impl.beanmanagement.Validator;
-import ru.afanasyev.fw.MovieMatchApplication;
+import ru.afanasyev.moviematch.app.impl.beanmanagement.ValidationExecutor;
+import ru.afanasyev.moviematch.app.impl.beanmanagement.Validator;
+import ru.afanasyev.moviematch.fw.MovieMatchApplication;
 
 /**
  * https://www.baeldung.com/spring-primary

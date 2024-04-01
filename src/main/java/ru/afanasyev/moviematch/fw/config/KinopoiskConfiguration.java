@@ -1,4 +1,4 @@
-package ru.afanasyev.fw.config;
+package ru.afanasyev.moviematch.fw.config;
 
 import lombok.Getter;
 import lombok.Setter;

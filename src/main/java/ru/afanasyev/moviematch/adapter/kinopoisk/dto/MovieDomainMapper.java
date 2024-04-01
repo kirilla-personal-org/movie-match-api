@@ -1,7 +1,7 @@
-package ru.afanasyev.adapter.kinopoisk.dto;
+package ru.afanasyev.moviematch.adapter.kinopoisk.dto;
 
 import org.mapstruct.Mapper;
-import ru.afanasyev.domain.movie.Movie;
+import ru.afanasyev.moviematch.domain.movie.Movie;
 
 @Mapper
 public interface MovieDomainMapper {

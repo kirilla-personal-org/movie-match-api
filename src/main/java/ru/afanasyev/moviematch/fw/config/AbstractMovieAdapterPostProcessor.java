@@ -1,19 +1,15 @@
-package ru.afanasyev.fw.config;
+package ru.afanasyev.moviematch.fw.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
-import ru.afanasyev.adapter.AbstractMovieAdapter;
-import ru.afanasyev.app.api.ServiceUnavailableException;
+import ru.afanasyev.moviematch.adapter.AbstractMovieAdapter;
 
 import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.Proxy;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 @Component

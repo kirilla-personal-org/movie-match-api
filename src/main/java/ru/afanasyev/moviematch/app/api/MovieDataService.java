@@ -1,6 +1,6 @@
-package ru.afanasyev.app.api;
+package ru.afanasyev.moviematch.app.api;
 
-import ru.afanasyev.domain.movie.Movie;
+import ru.afanasyev.moviematch.domain.movie.Movie;
 
 public interface MovieDataService {
     Movie getRandomMovie();

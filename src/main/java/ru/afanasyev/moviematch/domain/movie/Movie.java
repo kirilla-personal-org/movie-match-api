@@ -1,4 +1,4 @@
-package ru.afanasyev.domain.movie;
+package ru.afanasyev.moviematch.domain.movie;
 
 import lombok.Data;
 

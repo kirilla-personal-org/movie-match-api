@@ -1,4 +1,4 @@
-package ru.afanasyev.adapter.kinopoisk.dto;
+package ru.afanasyev.moviematch.adapter.kinopoisk.dto;
 
 import lombok.Data;
 

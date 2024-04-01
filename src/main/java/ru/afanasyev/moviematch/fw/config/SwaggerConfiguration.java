@@ -1,4 +1,4 @@
-package ru.afanasyev.fw.config;
+package ru.afanasyev.moviematch.fw.config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;

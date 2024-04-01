@@ -2,7 +2,7 @@ package unit;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.afanasyev.adapter.kinopoisk.KinopoiskTokenProvider;
+import ru.afanasyev.moviematch.adapter.kinopoisk.KinopoiskTokenProvider;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

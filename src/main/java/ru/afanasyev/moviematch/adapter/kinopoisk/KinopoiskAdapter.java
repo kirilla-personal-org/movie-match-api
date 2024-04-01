@@ -1,18 +1,13 @@
-package ru.afanasyev.adapter.kinopoisk;
+package ru.afanasyev.moviematch.adapter.kinopoisk;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
-import ru.afanasyev.adapter.AbstractMovieAdapter;
-import ru.afanasyev.adapter.kinopoisk.dto.MovieDomainMapper;
-import ru.afanasyev.adapter.kinopoisk.dto.MovieDto;
-import ru.afanasyev.app.api.MovieDataService;
-import ru.afanasyev.domain.movie.Movie;
-
-import java.util.Collections;
+import ru.afanasyev.moviematch.adapter.AbstractMovieAdapter;
+import ru.afanasyev.moviematch.adapter.kinopoisk.dto.MovieDomainMapper;
+import ru.afanasyev.moviematch.adapter.kinopoisk.dto.MovieDto;
+import ru.afanasyev.moviematch.app.api.MovieDataService;
+import ru.afanasyev.moviematch.domain.movie.Movie;
 
 @Component
 @Slf4j

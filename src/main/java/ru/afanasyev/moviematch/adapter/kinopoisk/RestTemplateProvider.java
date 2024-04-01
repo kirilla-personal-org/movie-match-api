@@ -1,4 +1,4 @@
-package ru.afanasyev.adapter.kinopoisk;
+package ru.afanasyev.moviematch.adapter.kinopoisk;
 
 import lombok.Builder;
 import lombok.NoArgsConstructor;

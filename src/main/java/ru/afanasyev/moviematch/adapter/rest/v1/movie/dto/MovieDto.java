@@ -1,4 +1,4 @@
-package ru.afanasyev.adapter.rest.v1.movie.dto;
+package ru.afanasyev.moviematch.adapter.rest.v1.movie.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;

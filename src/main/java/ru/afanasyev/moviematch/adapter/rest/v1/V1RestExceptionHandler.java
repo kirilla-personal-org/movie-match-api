@@ -1,11 +1,11 @@
-package ru.afanasyev.adapter.rest.v1;
+package ru.afanasyev.moviematch.adapter.rest.v1;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-import ru.afanasyev.app.api.ServiceUnavailableException;
+import ru.afanasyev.moviematch.app.api.ServiceUnavailableException;
 
 @ControllerAdvice
 public class V1RestExceptionHandler extends ResponseEntityExceptionHandler {
