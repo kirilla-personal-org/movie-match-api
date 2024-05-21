@@ -5,3 +5,6 @@ kinopoisk:
 bean:
   visualizer:
     web-path: /beans
+
+file:
+  input: C:\Users\KAfanasiev\Desktop\Study\movie-match\movie-match-api\src\main\resources\movies.data\movies.csv

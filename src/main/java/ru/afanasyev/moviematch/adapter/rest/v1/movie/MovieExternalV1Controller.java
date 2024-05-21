@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.afanasyev.moviematch.adapter.rest.v1.movie.dto.MovieDto;
 import ru.afanasyev.moviematch.adapter.rest.v1.movie.dto.MovieDtoMapper;
-import ru.afanasyev.moviematch.app.api.MovieDataService;
+import ru.afanasyev.moviematch.app.api.GetMovieOutbound;
 import ru.afanasyev.moviematch.domain.movie.Movie;
 
 @RestController
@@ -15,12 +15,12 @@ import ru.afanasyev.moviematch.domain.movie.Movie;
 @RequiredArgsConstructor
 @Tag(name = "Контроллер фильмов")
 public class MovieExternalV1Controller {
-    private final MovieDataService movieDataService;
+    private final GetMovieOutbound getMovieOutbound;
     private final MovieDtoMapper movieDtoMapper;
 
     @GetMapping("/random")
     public MovieDto getRandomMovie() {
-        Movie movie = movieDataService.getRandomMovie();
+        Movie movie = getMovieOutbound.getRandomMovie();
         return movieDtoMapper.mapToDto(movie);
     }
 }

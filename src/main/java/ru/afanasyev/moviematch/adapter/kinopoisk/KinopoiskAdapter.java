@@ -6,12 +6,12 @@ import org.springframework.stereotype.Component;
 import ru.afanasyev.moviematch.adapter.AbstractMovieAdapter;
 import ru.afanasyev.moviematch.adapter.kinopoisk.dto.MovieDomainMapper;
 import ru.afanasyev.moviematch.adapter.kinopoisk.dto.MovieDto;
-import ru.afanasyev.moviematch.app.api.MovieDataService;
+import ru.afanasyev.moviematch.app.api.GetMovieOutbound;
 import ru.afanasyev.moviematch.domain.movie.Movie;
 
 @Component
 @Slf4j
-public class KinopoiskAdapter extends AbstractMovieAdapter implements MovieDataService {
+public class KinopoiskAdapter extends AbstractMovieAdapter implements GetMovieOutbound {
     private final MovieDomainMapper movieDomainMapper;
 
     private final RestTemplateProvider restTemplateProvider;

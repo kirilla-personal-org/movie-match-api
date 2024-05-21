@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  movie-db-postgres:
+    image: postgres
+    container_name: 'movie-db-postgres'
+    environment:
+    - POSTGRES_DB=movie_db
+    - POSTGRES_USER=user
+    - POSTGRES_PASSWORD=password
+    ports:
+    - 12200:5432

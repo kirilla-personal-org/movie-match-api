@@ -2,10 +2,17 @@ spring:
   application:
     name: movie-match
   datasource:
+    hikari:
+      schema: public
     url: jdbc:postgresql://localhost:12200/movie_db
     username: user
     password: password
     driverClassName: org.postgresql.Driver
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
   config:
     import: optional:configserver:http://user:password@localhost:8888/
   cloud:
