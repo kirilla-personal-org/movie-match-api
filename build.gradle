@@ -36,9 +36,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-batch'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-quartz'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
-    implementation 'ru.afanasyev:movie-bean-visualizer:1.0-SNAPSHOT'
+    implementation 'ru.afanasyev:bean-visualizer-starter:1.0-SNAPSHOT'
 
     runtimeOnly 'org.postgresql:postgresql'
 
