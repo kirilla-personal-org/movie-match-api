@@ -1,7 +1,6 @@
 package ru.afanasyev.moviematch.adapter.persistence;
 
 import jakarta.persistence.QueryHint;
-import org.hibernate.jpa.AvailableHints;
 import org.hibernate.jpa.HibernateHints;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.QueryHints;

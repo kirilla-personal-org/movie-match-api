@@ -1,7 +1,5 @@
 package ru.afanasyev.moviematch.adapter.persistence;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import ru.afanasyev.moviematch.app.api.MovieRepository;
