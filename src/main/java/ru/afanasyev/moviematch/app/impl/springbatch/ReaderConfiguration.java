@@ -2,14 +2,9 @@ package ru.afanasyev.moviematch.app.impl.springbatch;
 
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.ItemReader;
-import org.springframework.batch.item.file.FlatFileItemReader;
-import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
-import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.FileSystemResource;
-import ru.afanasyev.moviematch.app.api.GetMovieOutbound;
+import ru.afanasyev.moviematch.app.api.GetRandomMovieOutbound;
 import ru.afanasyev.moviematch.domain.movie.Movie;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -45,14 +40,14 @@ public class ReaderConfiguration {
 
     @Bean
     @StepScope
-    public OutboundMovieReader outboundMovieReader(GetMovieOutbound getMovieOutbound) {
+    public OutboundMovieReader outboundMovieReader(GetRandomMovieOutbound getRandomMovieOutbound) {
         AtomicInteger readSize = new AtomicInteger(3);
         return () -> {
             if (readSize.get() <= 0) {
                 return null;
             }
             readSize.getAndDecrement();
-            return getMovieOutbound.getRandomMovie();
+            return getRandomMovieOutbound.getRandomMovie();
         };
     }
 

@@ -9,12 +9,15 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "movie")
 @Accessors(chain = true)
+@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class PersistentMovie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
