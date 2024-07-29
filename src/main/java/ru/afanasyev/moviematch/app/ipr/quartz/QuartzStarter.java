@@ -1,4 +1,4 @@
-package ru.afanasyev.moviematch.app.impl.quartz;
+package ru.afanasyev.moviematch.app.ipr.quartz;
 
 import org.quartz.JobBuilder;
 import org.quartz.JobDataMap;

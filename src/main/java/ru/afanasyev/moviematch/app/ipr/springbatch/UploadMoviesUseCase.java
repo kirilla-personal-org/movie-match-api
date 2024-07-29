@@ -1,4 +1,4 @@
-package ru.afanasyev.moviematch.app.impl.springbatch;
+package ru.afanasyev.moviematch.app.ipr.springbatch;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;

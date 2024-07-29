@@ -1,4 +1,4 @@
-package ru.afanasyev.moviematch.app.impl.springbatch;
+package ru.afanasyev.moviematch.app.ipr.springbatch;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;

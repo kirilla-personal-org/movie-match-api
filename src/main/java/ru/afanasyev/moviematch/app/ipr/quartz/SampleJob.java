@@ -1,4 +1,4 @@
-package ru.afanasyev.moviematch.app.impl.quartz;
+package ru.afanasyev.moviematch.app.ipr.quartz;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
-import static ru.afanasyev.moviematch.app.impl.quartz.QuartzStarter.ID_KEY;
+import static ru.afanasyev.moviematch.app.ipr.quartz.QuartzStarter.ID_KEY;
 
 @Component
 @Slf4j

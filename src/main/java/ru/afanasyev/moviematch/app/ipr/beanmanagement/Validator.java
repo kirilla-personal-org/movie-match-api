@@ -1,4 +1,4 @@
-package ru.afanasyev.moviematch.app.impl.beanmanagement;
+package ru.afanasyev.moviematch.app.ipr.beanmanagement;
 
 /**
  * Управление бинами Spring: Order
