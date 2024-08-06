@@ -12,6 +12,10 @@ spring:
     config:
       label: master
 
+bean:
+  visualizer:
+    web-path: /beans
+
 management:
   server:
     port: 8081
