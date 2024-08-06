@@ -1,11 +1,40 @@
 spring:
+  jpa:
+    #optional - show SQL statements in console.
+    show-sql: true
+    properties:
+      javax:
+        persistence:
+          sharedCache:
+            #required - enable selective caching mode - only entities with @Cacheable annotation will use L2 cache.
+            mode: ENABLE_SELECTIVE
+      hibernate:
+        #optional - enable SQL statements formatting.
+        format_sql: true
+        #optional - generate statistics to check if L2/query cache is actually being used.
+        generate_statistics: true
+        cache:
+          #required - turn on L2 cache.
+          use_second_level_cache: true
+          #optional - turn on query cache.
+          use_query_cache: true
+          region:
+            #required - classpath to cache region factory.
+            factory_class: org.hibernate.cache.jcache.JCacheRegionFactory
   application:
     name: movie-match
   datasource:
+    hikari:
+      schema: public
     url: jdbc:postgresql://localhost:12200/movie_db
     username: user
     password: password
     driverClassName: org.postgresql.Driver
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
   config:
     import: optional:configserver:http://user:password@localhost:8888/
   cloud:

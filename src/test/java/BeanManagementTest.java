@@ -2,8 +2,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import ru.afanasyev.moviematch.app.impl.beanmanagement.ValidationExecutor;
-import ru.afanasyev.moviematch.app.impl.beanmanagement.Validator;
+import ru.afanasyev.moviematch.app.ipr.beanmanagement.ValidationExecutor;
+import ru.afanasyev.moviematch.app.ipr.beanmanagement.Validator;
 import ru.afanasyev.moviematch.fw.MovieMatchApplication;
 
 /**

@@ -1,4 +1,4 @@
-package ru.afanasyev.moviematch.app.impl.beanmanagement;
+package ru.afanasyev.moviematch.app.ipr.beanmanagement;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
