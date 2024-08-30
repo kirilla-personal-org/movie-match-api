@@ -1,4 +1,4 @@
-package fw.config;
+package ru.afanasyev.moviematch.fw.config;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonGenerator;

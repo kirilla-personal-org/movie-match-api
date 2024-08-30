@@ -1,4 +1,4 @@
-package fw.config;
+package ru.afanasyev.moviematch.fw.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
