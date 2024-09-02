@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.afanasyev.moviematch.app.api.GetMovieOutbound;
 import ru.afanasyev.moviematch.app.api.MovieNotFoundException;
 import ru.afanasyev.moviematch.app.api.MovieRepository;
-import ru.afanasyev.moviematch.domain.persistent.PersistentMovie;
+import ru.afanasyev.moviematch.domain.movie.Movie;
 
 @Component
 @RequiredArgsConstructor
@@ -17,7 +17,7 @@ public class GetMovieUseCase implements GetMovieOutbound {
 
     @Override
     @Transactional(readOnly = true)
-    public PersistentMovie getByName(String name) {
+    public Movie getByName(String name) {
         return repository.findByName(name)
             .orElseThrow(() -> new MovieNotFoundException(name));
     }

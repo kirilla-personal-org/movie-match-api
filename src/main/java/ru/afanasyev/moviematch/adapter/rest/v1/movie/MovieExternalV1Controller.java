@@ -11,7 +11,6 @@ import ru.afanasyev.moviematch.adapter.rest.v1.movie.dto.MovieDtoMapper;
 import ru.afanasyev.moviematch.app.api.GetMovieOutbound;
 import ru.afanasyev.moviematch.app.api.GetRandomMovieOutbound;
 import ru.afanasyev.moviematch.domain.movie.Movie;
-import ru.afanasyev.moviematch.domain.persistent.PersistentMovie;
 
 @RestController
 @RequestMapping("/api/v1/external/movie")
@@ -30,7 +29,7 @@ public class MovieExternalV1Controller {
 
     @GetMapping
     public MovieDto getByName(@RequestParam String name) {
-        PersistentMovie movie = getMovieOutbound.getByName(name);
+        Movie movie = getMovieOutbound.getByName(name);
         return movieDtoMapper.mapToDto(movie);
     }
 }

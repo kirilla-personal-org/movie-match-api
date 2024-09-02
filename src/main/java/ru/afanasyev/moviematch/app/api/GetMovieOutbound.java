@@ -1,7 +1,7 @@
 package ru.afanasyev.moviematch.app.api;
 
-import ru.afanasyev.moviematch.domain.persistent.PersistentMovie;
+import ru.afanasyev.moviematch.domain.movie.Movie;
 
 public interface GetMovieOutbound {
-    PersistentMovie getByName(String name);
+    Movie getByName(String name);
 }

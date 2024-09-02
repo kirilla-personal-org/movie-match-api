@@ -1,7 +1,11 @@
 spring:
   flyway:
-    enabled: false
+    enabled: true
 
 kinopoisk:
   tokens:
     - aaa
+
+logging:
+  level:
+    ru.afanasyev.moviematch: debug

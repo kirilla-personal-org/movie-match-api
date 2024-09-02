@@ -3,8 +3,9 @@ package ru.afanasyev.moviematch.adapter.persistence;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import ru.afanasyev.moviematch.app.api.MovieRepository;
-import ru.afanasyev.moviematch.domain.persistent.PersistentMovie;
+import ru.afanasyev.moviematch.domain.movie.Movie;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -18,7 +19,12 @@ public class MovieRepositoryImpl implements MovieRepository {
     }
 
     @Override
-    public Optional<PersistentMovie> findByName(String name) {
+    public Optional<Movie> findByName(String name) {
         return repository.findByName(name);
+    }
+
+    @Override
+    public List<Movie> findAll() {
+        return repository.findAll();
     }
 }
